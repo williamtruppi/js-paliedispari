@@ -3,25 +3,24 @@ var userWord = prompt("Inserisci una parola");
 console.log(userWord);
 console.log(userWord.length);
 
-//converto la stringa in un array di caratteri
-var testWordArray = userWord.split('');
-console.log(testWordArray, testWordArray.length);
+//ribalto la parola
+var testWord = userWord.split('').reverse().join('');
+console.log(testWord);
 
-var testWord;
+//dichiaro una variabile che conterrà il messaggio del risultato
+var message;
 
+/** Funzione che effettua il controllo sulla parola
+ * @param {*} word
+ * 
+ */
 function palindromeWordCheck (word){
-  for (i = testWordArray.length; i > testWordArray.length; i--)
-  testWord += testWordArray[i];
-  return word;
+  if (word === userWord){
+    return message = "La parola è Palindroma";
+  } else {
+    return message = "La parola NON è Palindroma";
+  }
 }
 
-var wordCheck = palindromeWordCheck(userWord);
-console.log(wordCheck);
-console.log("la testword è " + testWord);
-
-if (userWord === wordCheck){
-  console.log("la parola è palindroma");
-} else {
-  console.log("la parola non è palindroma");
-}
-
+var palindromeWord = palindromeWordCheck(testWord)
+console.log(palindromeWord);
