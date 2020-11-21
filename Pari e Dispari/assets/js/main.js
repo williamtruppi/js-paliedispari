@@ -29,7 +29,7 @@ var message;
 
 /** Funziona che svolge il controllo sul risultato della somma
  * se pari e utente scegli pari --- ha vinto
- * se dispari e utente scegli pari --- ha vinto
+ * se dispari e utente scegli dispari --- ha vinto
  * se dispari e utente scegli pari --- ha perso
  * se pari e utente scegli disppari --- ha perso
  * @param {*} sum 
@@ -45,7 +45,6 @@ function isEvenOrOdd (sum){
   } else if (sum % 2 == 0 && userChoice === "dispari") {
     message = "il risultato è PARI ---> HAI PERSO!!";
   }
-
   return message;
 }
 

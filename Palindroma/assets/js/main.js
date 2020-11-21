@@ -1,5 +1,9 @@
 //acquisisco la parola col prompt
-var userWord = prompt("Inserisci una parola");
+
+do {
+  var userWord = prompt("Inserisci una parola");
+} while (!isNaN(userWord))
+
 console.log(userWord);
 console.log(userWord.length);
 
